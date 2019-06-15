@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Line</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+
+<nav id="menu">
+  <header>
+    <img src="https://static.wixstatic.com/media/d1a3d1_37d3700585634feb8415615071697009~mv2.png/v1/fill/w_196,h_48,al_c,q_80,usm_2.00_1.00_0.00/d1a3d1_37d3700585634feb8415615071697009~mv2.webp" alt="">
+  </header>
+  <h3>Линия</h3>
+  <ul>
+  	<li>
+  		<a href="#">Параметры</a>
+  	</li>
+  	<li>
+  		<a href="#">Справочник</a>
+  	</li>
+  	<li>
+  		<a href="#">Стрейч, промывка</a>
+  	</li>
+  </ul>
+  <h3>Сервисы</h3>
+</nav>
+
+<main id="panel">
+  <header>
+    <button class="btn-hamburger js-slideout-toggle"></button>
+  </header>
+</main>
+
+
+<script src="slideout.js"></script>
+<script src="test.js"></script>
+<script>
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 300,
+    'tolerance': 70
+  });
+
+  document.querySelector('.btn-hamburger').addEventListener('click', function() {
+    slideout.toggle();
+  });
+</script>
+</body>
+</html>
